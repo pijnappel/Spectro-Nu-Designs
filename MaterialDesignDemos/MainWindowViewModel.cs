@@ -5,21 +5,23 @@ using MaterialDesignThemes.Wpf;
 using MaterialDesignThemes.Wpf.Transitions;
 using System.Windows.Controls;
 using System;
+using MaterialDesignColors.SpectroAndNu;
 
 namespace MaterialDesignColors.WpfExample.Domain
 {
-    public class MainWindowViewModel
+  public class MainWindowViewModel
+  {
+    public MainWindowViewModel(ISnackbarMessageQueue snackbarMessageQueue)
     {
-        public MainWindowViewModel(ISnackbarMessageQueue snackbarMessageQueue)
-        {
-            if (snackbarMessageQueue == null) throw new ArgumentNullException(nameof(snackbarMessageQueue));
+      if (snackbarMessageQueue == null) throw new ArgumentNullException(nameof(snackbarMessageQueue));
 
-            DemoItems = new[]
-            {
-                new DemoItem("Home", new Home(), null),
+      DemoItems = new[]
+      {
+                  new DemoItem("Home", new Home(), null),
 
-                 new DemoItem("--- Spectro and Nu ---", null, null, false), // Separator, nothing fancy for now
+                  new DemoItem("--- Spectro and Nu ---", null, null, false), // Separator, nothing fancy for now
 
+                  new DemoItem("Navigation", new Navigation(), null, true),
 
 
                  new DemoItem("--- Material Design Toolkit ---", null, null, false), // Separator
@@ -218,8 +220,8 @@ namespace MaterialDesignColors.WpfExample.Domain
                         DocumentationLink.DemoPageLink<Shadows>(),
                     }),
             };
-        }
-
-        public DemoItem[] DemoItems { get; }
     }
+
+    public DemoItem[] DemoItems { get; }
+  }
 }

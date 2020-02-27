@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="MaterialDesignColors.SpectroAndNu.Navigation"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+						 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+						 xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+						 xmlns:domain="clr-namespace:MaterialDesignDemo.Domain"
+						 mc:Ignorable="d" 
+						 d:DesignHeight="700" d:DesignWidth="800">
+	<Grid>
+		<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+			<StackPanel>
+				<TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}">Navigation Patterns</TextBlock>
+
+				<TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Margin="0,20,0,0">1. Left to right -- Get more detailed</TextBlock>
+
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="0,20,0,0" TextWrapping="Wrap">
+				This navigation pattern is ideal for large and complex applications on a large screen. It is designed to provide a fallback anchor to the user. Whenever he gets lost, he can start over from the left side and dive deeper into the complexity of the application.
+				</TextBlock>
+
+				<Image Source="../Resources/navigation1.png" Width="700" Stretch="Uniform" HorizontalAlignment="Left" Margin="20,20,20,0" />
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" FontWeight="Bold" Margin="20,5,0,0" TextWrapping="Wrap">
+					Example (not yet material design)
+				</TextBlock>
+
+				<Image Source="../Resources/navigation2.png" Width="700" Stretch="Uniform" HorizontalAlignment="Left" Margin="20,20,20,0" />
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" FontWeight="Bold" Margin="20,5,0,0" TextWrapping="Wrap">
+					Example (ICP Analyzer Pro - Material Design)
+				</TextBlock>
+				
+				
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+					Level 1 is the root navigation. A menu to access all areas of the application. this menu might be collapsible using a Hamburger menu.
+				</TextBlock>
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+					Level 2 is the area where the modules inner navigation or data generation happens. Here is either a list of folders/files or the measurement input area, where the user can generate measurement results. These results or the contents of files wool be displayed on the right of this area.
+				</TextBlock>
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+					Level 3 is the area that provides the details. These could be measurement results, settings or the calibration of a method. The user can always go back to the left to assess, which set of data is currently displayed.
+				</TextBlock>
+
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+					Theoretically this navigation pattern could move further to the right by adding layers. The user could dig deeper into the details of the data. 
+					But this addition of layers will also add complexity force a structure that makes it harder for the user to recognize the data quickly. Therefor the Level 3 is the deepest level of this navigation. This area can be desinged to the needs of the user and the data to be presented. 
+					In some cases we added Tabs to separate the data editing options. In other cases this area contains just a list of data (e.g. concentrations). 
+				</TextBlock>
+
+				<TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Margin="0,20,0,0">Additional/Overall Data - Header and Footer</TextBlock>
+
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="0,20,0,0" TextWrapping="Wrap">
+					If there is additional information available which should be available all the time, the view could be extended by a header or footer. 
+					In our case her we can display instrument status infotmation in the header. There is a global search box to run a search accross all modules and if there are any notifications, they will be displayed here.
+				</TextBlock>
+
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</UserControl>
+
