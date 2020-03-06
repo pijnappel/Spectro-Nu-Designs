@@ -53,7 +53,36 @@
 					In our case her we can display instrument status infotmation in the header. There is a global search box to run a search accross all modules and if there are any notifications, they will be displayed here.
 				</TextBlock>
 
-			</StackPanel>
+
+                <Border BorderThickness="0,1,0,0" BorderBrush="Gray" Margin="0,40,0,40" />
+
+                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}">2. Multi-page "MDI" application with vertical menu</TextBlock>
+
+                <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+                    This design is used by the Nu Instruments "CoDaq" instrument control software. The design was driven by the needs of engineers and existing customers, who have a preference for the 
+                    "MDI" applciation style used in the older software platform, as this provides a lot of flexibility in customising the application's content and display. In CoDaq, a user can create one or more pages, each of which can be populated by numerous 
+                    draggable and resizeable "widgets" (child windows).
+                </TextBlock>
+
+				<Image Source="../Resources/Codaq1.png" Width="700" Stretch="Uniform" HorizontalAlignment="Left" Margin="20,20,20,0" />
+				<TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" FontWeight="Bold" Margin="20,5,0,0" TextWrapping="Wrap">
+					Example CoDaq window (the "Home" page is shown)
+				</TextBlock>
+
+                <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+                    The vertical menu (area #1) provides access to the widgets, allowing the user to add them to the current page. The menu also provides access to other functions,
+                    many of which are displayed as modal windows. The menu collapses down to a hamburger, and only expands on mouse hover.
+                </TextBlock>
+                <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+                    The horizontal bar (area #2) allows the user to navigate backwards and forwards through the pages. The user can create as many pages as they wish, and there is no restriction on
+                    the widgets that can be added to each page (and the same widget may appear on more than one page). However we do encourage pages to be used loosely as a "workflow", where each page provides a logical 
+                    collection of widgets that relate to a particular function, for example monitoring, tuning, scanning, acquisition, etc.
+                </TextBlock>
+                <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" Margin="20,20,0,0" TextWrapping="Wrap">
+                    The title bar (area #3) provides important notification and status information - trips, errors, and so on.
+                </TextBlock>
+
+            </StackPanel>
 		</ScrollViewer>
 	</Grid>
 </UserControl>
